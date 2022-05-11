@@ -1,7 +1,3 @@
-# Carrot Market Clone Coding
+# Carrot Market
 
-## To. 미래의 나에게
-
-##  내가 무사히 잘, 꾸준히, 배우고 마칠 수 있기를 기원합니다. 
-
-## From. 과거의 나
+Serverless Carrot Market Clone using NextJS, Tailwind, Prisma, PlanetScale and Cloudflare.

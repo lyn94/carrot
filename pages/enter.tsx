@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import Button from "../components/button";
-import Input from "../components/input";
-import useMutation from "../libs/client/useMutation";
-import { cls } from "../libs/client/utils";
+import Button from "@components/button";
+import Input from "@components/input";
+import useMutation from "@libs/client/useMutation";
+import { cls } from "@libs/client/utils";
 
 interface EnterForm {
   email?: string;
@@ -12,8 +12,8 @@ interface EnterForm {
 }
 
 const Enter: NextPage = (props) => {
-  const [enter, {loading, data, error}] = useMutation("/api/users/enter")
-  const [ submitting, setSubmitting ] = useState(false);
+  const [enter, { loading, data, error }] = useMutation("/api/users/enter");
+  const [submitting, setSubmitting] = useState(false);
   const { register, handleSubmit, reset } = useForm<EnterForm>();
   const [method, setMethod] = useState<"email" | "phone">("email");
   const onEmailClick = () => {
@@ -27,8 +27,6 @@ const Enter: NextPage = (props) => {
   const onValid = (validForm: EnterForm) => {
     enter(validForm);
   };
-console.log(loading, data, error);
-
   return (
     <div className="mt-16 px-4">
       <h3 className="text-3xl font-bold text-center">Enter to Carrot</h3>
